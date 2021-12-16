@@ -1,0 +1,158 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "amazon_api",
+    "description": "ordering a product from amazon",
+    "version": "1.0"
+  },
+  "paths": {
+    "/login to account": {
+      "put": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "username": "Rukhsana tasneem",
+                  "password": "123456789"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "message": "login successfull"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ordering product": {
+      "get": {
+        "description": "searching a product",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "message": "searching for order completed"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "ordering a product",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "product name": "redmi 9 pro",
+                  "product id": "1234",
+                  "product prize": "10000",
+                  "address": "xyz",
+                  "payment mode": "google pay",
+                  "message": "notification"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "message": "order succefully completed"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Failure cases": {
+      "get": {
+        "description": "searching a product",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "message": "searching for order failed"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "ordering a product",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "product name": "Samsung",
+                  "product id": "9874",
+                  "product prize": "15000",
+                  "address": "xyz",
+                  "payment mode": "google pay",
+                  "message": "notification"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "message": "order declined"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
