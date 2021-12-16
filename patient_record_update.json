@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Patient_Record_Update",
+    "version": "1.0"
+  },
+  "paths": {
+    "/patientstatus": {
+      "get": {
+        "description": "retrieves the patient data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "message": "Patient is already exist"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "description": "update the patient data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "pati_id": 100,
+                  "pati_name": "saiman",
+                  "Status": "Active",
+                  "medical history": "xxxxx",
+                  "medical directive": "xyz",
+                  "lab result": "pass",
+                  "progress notes": "xyz"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "login_time": 100,
+                    "message": "Success"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/failure": {
+      "put": {
+        "description": "update the patient data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "pati_id": 101,
+                  "pati_name": "ruksana",
+                  "Status": "Active",
+                  "medical history": "xxxxx",
+                  "medical directive": "xyz",
+                  "lab result": "pass",
+                  "progress notes": "xyz"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "login_time": 100,
+                    "message": "failure"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
