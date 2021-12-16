@@ -1,0 +1,37 @@
+Patient Record Update:
+
+pre-requirments:
+details of patient,
+laboratory test result
+and overview of medical history of patient
+
+Senario:
+
+  - Updating patient information(patient name,address,phone no,date,time etc..)
+
+2. Medical History
+  -Updating previous medical treatments
+
+3. Medication information
+  - medicine that is used treat the disease
+
+4. Treatment History
+  -History of illness,vital sign,medical allergies etc....
+
+5. Medical Directive
+ -docter/a physician who provides guidance
+
+6. Lab result
+ -Updating lap results
+
+7. Consent Forms
+ -Signing a form by person of intrest to confirm the or agree the treatment
+
+8. Progress Notes
+  -updating new information and changes during patient treatment
+
+9. Financial Information
+ -updating fainancial status
+
+
+  
