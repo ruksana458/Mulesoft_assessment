@@ -6,7 +6,7 @@ laboratory test result
 and overview of medical history of patient
 
 Senario:
-
+1.
   - Updating patient information(patient name,address,phone no,date,time etc..)
 
 2. Medical History
