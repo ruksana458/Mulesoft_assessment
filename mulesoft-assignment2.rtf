@@ -1,0 +1,469 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}{\f1\fnil Times New Roman;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sl360\slmult1\qj\f0\fs24\lang9 Q1.\par
+A company has an API to manage purchase orders, with each record identified by a unique purchase order ID. The API was built with RAML according to MuleSoft best practices.\par
+What URI should a web client use to request order P05555?\par
+\par
+ANS: A]/orders/\{P05555\}\par
+Q2.\par
+A Database On Table Row listener retrieves data from a CUSTOMER table that contains a primary key userjd column and an increasing kxjin_date_time column. Neither column allows duplicate values.\par
+How should the listener be configured so it retrieves each row at most one time?\par
+ANS: A]Set the watermark column to the bgin_date_time column\par
+Q3.\par
+Refer to the exhibits What payload and quantity are logged at the end of the main flow\par
+ANS: A]  [[1,2,3,4], 14]\par
+Q4.\par
+A Mule project contains a DataWeave module called MyModule.dwl that defines a function named formatString. The module is located in the project's src/main/resources/modules folder.\par
+What is the correct way in DataWeave code to import MyModule using a wildcard and then call the module's formatString function?\par
+ANS:C]\par
+  \par
+Q5.\par
+Refer to the exhibits The Set Payload transformer In the addltem subflow uses DataWeave to create an order object.\par
+What is the correct DataWeave code for the Set Payload transformer in the createOrder flow to use the addltem subflow to add a router cable with the price of 100 to the order?\par
+ANS: Blookupf 'addltem', \{ payload: \{ price: '100', item: 'router', itemType: 'cable' \} \} )\par
+Q6\par
+What condition requires using a CloudHub Dedicated Load Balancer?\par
+ANS  When custom DNS names are required for API implementations deployed to customer-hosted Mule runtimes\par
+Q7\par
+When designing an upstream API and its implementation, the development team has been advised to not set timeouts when invoking downstream API. Because the downstream API has no SLA that can be relied upon. This is the only donwstream API dependency of that upstream API. Assume the downstream API runs uninterrupted without crashing. What is the impact of this advice?\par
+ANS: A default timeout of 500 ms will automatically be applied by the Mule runtime in which the upstream API implementation executes.\par
+Q8 \par
+An API has been updated in Anypoint Exchange by its API producer from version 3.1.1 to 3.2.0 following accepted semantic versioning practices and the changes have been communicated via the API's public portal. The API endpoint does NOT change in the new version. How should the developer of an API client respond to this change?\par
+ANS: The API client code ONLY needs to be changed if it needs to take advantage of new features.\par
+Q9\par
+A new upstream API Is being designed to offer an SLA of 500 ms median and 800 ms maximum (99th percentile) response time. The corresponding API implementation needs to sequentially invoke 3 downstream APIs of very similar complexity. The first of these downstream APIs offers the following SLA for its response time: median: 100 ms, 80th percentile: 500 ms, 95th percentile: 1000 ms. If possible, how can a timeout be set in the upstream API for the invocation of the first downstream API to meet the new upstream API's desired SLA?\par
+ANS: No timeout is possible to meet the upstream API's desired SLA; a different SLA must be negotiated with the first downstream API or invoke an alternative API\par
+Q10\par
+An organization has several APIs that accept JSON data over HTTP POST. The APIs are all publicly available and are associated with several mobile applications and web applications. The organization does NOT want to use any authentication or compliance policies for these APIs, but at the same time, is worried that some bad actor could send payloads that could somehow compromise the applications or servers running the API implementations. What out-of-the-box Anypoint Platform policy can address exposure to this threat?\par
+ANS: Apply an IP blacklist policy to all APIs; the blacklist will Include all bad actors\par
+Q11\par
+An organization is implementing a Quote of the Day API that caches today's quote. What scenario can use the CloudHub Object Store connector to persist the cache's state?\par
+ANS: When there is one deployment of the API implementation to CloudHub and another one to customer hosted mule runtime that must share the cache state.\par
+Q12\par
+An organization is evaluating using the CloudHub shared Load Balancer (SLB) vs creating a CloudHub dedicated load balancer (DLB). They are evaluating how this choice affects the various types of certificates used by CloudHub deployed Mule applications, including MuleSoft-provided, customer-provided, or Mule application-provided certificates. What type of restrictions exist on the types of certificates for the service that can be exposed by the CloudHub Shared Load Balancer (SLB) to external web clients over the public internet?\par
+ANS: Only MuleSoft provided certificates can be used for server side certificate\par
+Q13\par
+Refer to the exhibit. What are the values of the counter and stepVar variables in the On Complete phase?\par
+ANS: Counter: 1, stepVar: null\par
+Q14 What MuleSoft product enables publishing, sharing, and searching of APIs?\par
+ANS: Anypoint Exchange\par
+Q15\par
+Refer to the exhibit. What are the values of the counter and stepVar variables after the Batch Job?\par
+ANS: Counter: 1, stepVar: null\par
+Q16\par
+A Batch Job scope has three batch steps. An event processor in the second batch step throws an error because the input data is incomplete. What is the default behavior of the batch job after the error is thrown?\par
+ANS: What MuleSoft product enables publishing, sharing, and searching of APIs? \par
+The second batch step is retried\par
+Q17\par
+ Refer to the exhibits. What is the output of the Logger component in the Batch Job?\par
+ \par
+ANS: [.333, 1]\par
+Q18\par
+In a RAML specification, what attribute defines a query parameter to be optional for a resource?\par
+ANS: Required: false\par
+\par
+Q19 What is NOT part of a Mule 3 message?\par
+ANS: Variables\par
+Q19\par
+What out-of-the-box policy can safeguard against Denial of Service type attacks?\par
+ANS: Rate limiting\par
+\par
+Q20\par
+A Mule application properties file named training-DEVproperties has been defined. How is the properties file referenced in the Mule application?\par
+ANS: In a Property Placeholder element\par
+\par
+Q21 What port number is used to expose the domain URL of a Mule application deployed to CloudHub?\par
+ANS:80\par
+ \par
+Q22 What message processor can set the HTTP response status code to 200?\par
+ANS: Property\par
+Q23\par
+What property of a Mule message is immutable?\par
+ANS: InboundProperties\par
+Q24\par
+A Mule application has two flows named parentFlow and childFlow. A variable is defined in parentFlow. What is true for a Mule subflow?\par
+ANS: An external client can send messages directly to it\par
+\par
+Q25 What is the default processing strategy of a one-way flow?\par
+ANS: Queued-thread-per-processor\par
+Q26\par
+What is the default processing strategy of a one-way flow?\par
+Whatis required for two Mule applications to share data using a VM connector component?\par
+ \par
+ANS: Put the Mule applications in the same non-default Mule domain\par
+\par
+Q27 \par
+How are outbound properties automatically passed to an outbound REST request using an HTTP Request component?\par
+ANS: As headers\par
+\par
+Q28\par
+A WSDL defines a conversionRate operation with an input message that requires two parts: fromCurrency and toCurrency. How are fromCurrency and toCurrency set in the flow in order to call the conversionRate operation using a Web Service Consumer component?\par
+ \par
+ANS: In the message payload\par
+\par
+Q29 \par
+What is NOT a way to pass data to a RESTful web service in a flow using an outbound HTTP Request component?\par
+ANS: Set inbound properties before the HTTP Request component\par
+Q30\par
+What asset can NOT be created using Anypoint Platform Design Center?\par
+ANS: API portals\par
+\par
+Q30 An exception is caught by a choice exception strategy. How is the exception routed? \par
+ANS: To the first excePtion strategy whose condition evaluates to true\par
+Q31\par
+How is a default exception strategy set in a Mule application?\par
+ANS:\par
+Q32\par
+A Payload filter is configured to test for type javalang_String. What happens when the filter is passed a message with the payload null?\par
+ \par
+ANS: The message is passed to subsequent message processors\par
+\par
+Q33\par
+What module and operation will throw an exception if a Mule event's payload is not a number?\par
+ \par
+ANS: Validation module\rquote s Is number operation\par
+Q34\par
+A Mule flow has a JMS queue listener as the message source. Where can the next message processor access a JMS messages header?\par
+ \par
+Inbound property\par
+Q35\par
+What part of a Mule flow can contain a Poll scope?\par
+ANS: Message source\par
+Q36\par
+How is a Poll scope's watermark accessed from a message processor in a flow?\par
+ANS: In a flow variable\par
+Q37\par
+A File connector configured to read files from a /mule/input directory. All other File connector settings are the default settings. What happens to a file after it is processed by the File connector?\par
+ANS: The file is deleted from the input directory, but is not moved anywhere\par
+\par
+Q38\par
+What phase of a batch job using a Batch scope must contain at least one message processor?\par
+ANS: Process Records\par
+\par
+Q39 A message payload is modified using a Message Enricher scope with an empty target. What is true about the message payload that leaves the Message Enricher scope?\par
+ \par
+ANS: The modified payload is stored as an outbound property\par
+\par
+Q40 A Batch scope has three batch steps. A message\par
+ processor in the second batch step throws an exception because the input data is incomplete. What is the default behavior after the exception is thrown?\par
+ANS: Stops processing the entire batch job\par
+Q41\par
+What is the purpose of the api:router element in APIkit?\par
+ANS: Validates requests against RAML API specifications and routes them to API implementations\par
+Q42\par
+What is the scope of a record variable in a Batch scope?\par
+ANS: In all batch steps, but not in the On Complete phase\par
+Q43\par
+A web client submits a GET request to a Mule 4 application to the endpoint /customers?id=48493. Where is the id stored in the Mule event by the HTTP Listener?\par
+ANS: Attributes\par
+Q44\par
+Assume that a database table contains a record ID column that always increases as new records get added to the table. In a Mule application, what is the key process to enable manual watermarking for requests to a database using the Scheduler endpoint and the Database SELECT operation?\par
+ANS: Save the max recordID from the set of recordIDs in an ObjectStore and reference this record in subsequent database requests\par
+Q45\par
+How is the success of a Center for enablement measured?\par
+ANS: Measured on asset consumption\par
+Q46 What are four ways APIs provide the info for how to communicate with a software component?\par
+ANS:\par
+Q47 This defines what you can call, what you send it, and what you get back:\par
+ANS: Web Service\par
+\par
+Q48 An API has been created in Design Center. What is the next step to make the API discoverable?\par
+ANS: Publish the API to Anypoint Exchange\par
+\par
+Q49\par
+What is an application that controls access to a web service, restricting access and usage with an API gateway?\par
+ANS: API Proxy\par
+Q50\par
+What is the actual implementation you can make calls to or the interface of that API implementation?\par
+ANS:\par
+Q51\par
+How are SOAP web services defined?\par
+\par
+ANS: In an XML-based WSDL (Web Services Description Language file\par
+Q52\par
+In what file does the Mule project keep track of all of its dependencies?\par
+ANS: Pom.xml\par
+\par
+Q53 What do RESTful web services use?\par
+ANS: Existing HTTP communication protocol\par
+Q54\par
+What is the minimum required configuration in a flow for a Mule application to compile?\par
+ANS: An event/message processor in the Source section of a flow\par
+\par
+Q55\par
+What can ONLY be done with VM connectors, and NOT with Flow References, in a single Mule application?\par
+ANS: Allow a flow to pass events to another flow asynchronously\par
+\par
+Q56\par
+Which RESTful web service request method partially updates a resource?\par
+ANS: PATCH\par
+\par
+Q57\par
+Which RESTful web service request method creates a new resource?\par
+ANS: PUT\par
+Q58\par
+An inbound Database connector is configured to select rows from a MySQL database. What is the format of results returned from the database query?\par
+ANS: JAVA\par
+Q59\par
+Which RESTful web service request method deletes a resource?\par
+ANS: DELETE\par
+Q60 What is NOT part of a Mule 4 event?\par
+ANS: ATRIBUTE\par
+Q61\par
+What file type is required to configure a Web Service Consumer to consume a SOAP web service?\par
+ANS: WSDL\par
+Q62 How does APIkit determine the number of flows to generate from a RAML specification?\par
+ANS: Creates a separate flow for each HTTP method\par
+\par
+Q63 How are query parameters dynamically passed to an outbound REST request using an HTTP Request operation?\par
+ANS: As query parameters in the HTTP Request operation\par
+\par
+Q64 What is the purpose of API autodiscovery?\par
+ANS: Allows a deployed Mule application to connect with API Manager to download policies and act as its own API proxy\par
+\par
+1.\tab Q65 Refer to the exhibit:\par
+#%RAML 1.0 title: ACME Medical API baseUri: {{\field{\*\fldinst{HYPERLINK https://dev.acme.com/api /patients }}{\fldrslt{https://dev.acme.com/api /patients\ul0\cf0}}}}\f0\fs24 : GET: queryParameters: year: type: integer example: 2017 What is the correct URL to perform a GET request to /patients?\par
+ \par
+ANS:\par
+\par
+\par
+\par
+\par
+\f1\emspace\f0\par
+Refer to the exhibit. The payload [1,2,3] is passed to the Batch Job scope. In Batch_Step_1, a variable named batchStepPayload is set to the current payload. What is the value of the last log message after one batch job completes?\par
+\par
+\par
+\par
+\par
+\par
+Q1.\par
+A company has an API to manage purchase orders, with each record identified by a unique purchase order ID. The API was built with RAML according to MuleSoft best practices.\par
+What URI should a web client use to request order P05555?\par
+\par
+ANS: A]/orders/\{P05555\}\par
+Q2.\par
+A Database On Table Row listener retrieves data from a CUSTOMER table that contains a primary key userjd column and an increasing kxjin_date_time column. Neither column allows duplicate values.\par
+How should the listener be configured so it retrieves each row at most one time?\par
+ANS: A]Set the watermark column to the bgin_date_time column\par
+Q3.\par
+Refer to the exhibits What payload and quantity are logged at the end of the main flow\par
+ANS: A]  [[1,2,3,4], 14]\par
+Q4.\par
+A Mule project contains a DataWeave module called MyModule.dwl that defines a function named formatString. The module is located in the project's src/main/resources/modules folder.\par
+What is the correct way in DataWeave code to import MyModule using a wildcard and then call the module's formatString function?\par
+ANS:C]\par
+  \par
+Q5.\par
+Refer to the exhibits The Set Payload transformer In the addltem subflow uses DataWeave to create an order object.\par
+What is the correct DataWeave code for the Set Payload transformer in the createOrder flow to use the addltem subflow to add a router cable with the price of 100 to the order?\par
+ANS: Blookupf 'addltem', \{ payload: \{ price: '100', item: 'router', itemType: 'cable' \} \} )\par
+Q6\par
+What condition requires using a CloudHub Dedicated Load Balancer?\par
+ANS  When custom DNS names are required for API implementations deployed to customer-hosted Mule runtimes\par
+Q7\par
+When designing an upstream API and its implementation, the development team has been advised to not set timeouts when invoking downstream API. Because the downstream API has no SLA that can be relied upon. This is the only donwstream API dependency of that upstream API. Assume the downstream API runs uninterrupted without crashing. What is the impact of this advice?\par
+ANS: A default timeout of 500 ms will automatically be applied by the Mule runtime in which the upstream API implementation executes.\par
+Q8 \par
+An API has been updated in Anypoint Exchange by its API producer from version 3.1.1 to 3.2.0 following accepted semantic versioning practices and the changes have been communicated via the API's public portal. The API endpoint does NOT change in the new version. How should the developer of an API client respond to this change?\par
+ANS: The API client code ONLY needs to be changed if it needs to take advantage of new features.\par
+Q9\par
+A new upstream API Is being designed to offer an SLA of 500 ms median and 800 ms maximum (99th percentile) response time. The corresponding API implementation needs to sequentially invoke 3 downstream APIs of very similar complexity. The first of these downstream APIs offers the following SLA for its response time: median: 100 ms, 80th percentile: 500 ms, 95th percentile: 1000 ms. If possible, how can a timeout be set in the upstream API for the invocation of the first downstream API to meet the new upstream API's desired SLA?\par
+ANS: No timeout is possible to meet the upstream API's desired SLA; a different SLA must be negotiated with the first downstream API or invoke an alternative API\par
+Q10\par
+An organization has several APIs that accept JSON data over HTTP POST. The APIs are all publicly available and are associated with several mobile applications and web applications. The organization does NOT want to use any authentication or compliance policies for these APIs, but at the same time, is worried that some bad actor could send payloads that could somehow compromise the applications or servers running the API implementations. What out-of-the-box Anypoint Platform policy can address exposure to this threat?\par
+ANS: Apply an IP blacklist policy to all APIs; the blacklist will Include all bad actors\par
+Q11\par
+An organization is implementing a Quote of the Day API that caches today's quote. What scenario can use the CloudHub Object Store connector to persist the cache's state?\par
+ANS: When there is one deployment of the API implementation to CloudHub and another one to customer hosted mule runtime that must share the cache state.\par
+Q12\par
+An organization is evaluating using the CloudHub shared Load Balancer (SLB) vs creating a CloudHub dedicated load balancer (DLB). They are evaluating how this choice affects the various types of certificates used by CloudHub deployed Mule applications, including MuleSoft-provided, customer-provided, or Mule application-provided certificates. What type of restrictions exist on the types of certificates for the service that can be exposed by the CloudHub Shared Load Balancer (SLB) to external web clients over the public internet?\par
+ANS: Only MuleSoft provided certificates can be used for server side certificate\par
+Q13\par
+Refer to the exhibit. What are the values of the counter and stepVar variables in the On Complete phase?\par
+ANS: Counter: 1, stepVar: null\par
+Q14 What MuleSoft product enables publishing, sharing, and searching of APIs?\par
+ANS: Anypoint Exchange\par
+Q15\par
+Refer to the exhibit. What are the values of the counter and stepVar variables after the Batch Job?\par
+ANS: Counter: 1, stepVar: null\par
+Q16\par
+A Batch Job scope has three batch steps. An event processor in the second batch step throws an error because the input data is incomplete. What is the default behavior of the batch job after the error is thrown?\par
+ANS: What MuleSoft product enables publishing, sharing, and searching of APIs? \par
+The second batch step is retried\par
+Q17\par
+ Refer to the exhibits. What is the output of the Logger component in the Batch Job?\par
+ \par
+ANS: [.333, 1]\par
+Q18\par
+In a RAML specification, what attribute defines a query parameter to be optional for a resource?\par
+ANS: Required: false\par
+\par
+Q19 What is NOT part of a Mule 3 message?\par
+ANS: Variables\par
+Q19\par
+What out-of-the-box policy can safeguard against Denial of Service type attacks?\par
+ANS: Rate limiting\par
+\par
+Q20\par
+A Mule application properties file named training-DEVproperties has been defined. How is the properties file referenced in the Mule application?\par
+ANS: In a Property Placeholder element\par
+\par
+Q21 What port number is used to expose the domain URL of a Mule application deployed to CloudHub?\par
+ANS:80\par
+ \par
+Q22 What message processor can set the HTTP response status code to 200?\par
+ANS: Property\par
+Q23\par
+What property of a Mule message is immutable?\par
+ANS: InboundProperties\par
+Q24\par
+A Mule application has two flows named parentFlow and childFlow. A variable is defined in parentFlow. What is true for a Mule subflow?\par
+ANS: An external client can send messages directly to it\par
+\par
+Q25 What is the default processing strategy of a one-way flow?\par
+ANS: Queued-thread-per-processor\par
+Q26\par
+What is the default processing strategy of a one-way flow?\par
+Whatis required for two Mule applications to share data using a VM connector component?\par
+ \par
+ANS: Put the Mule applications in the same non-default Mule domain\par
+\par
+Q27 \par
+How are outbound properties automatically passed to an outbound REST request using an HTTP Request component?\par
+ANS: As headers\par
+\par
+Q28\par
+A WSDL defines a conversionRate operation with an input message that requires two parts: fromCurrency and toCurrency. How are fromCurrency and toCurrency set in the flow in order to call the conversionRate operation using a Web Service Consumer component?\par
+ \par
+ANS: In the message payload\par
+\par
+Q29 \par
+What is NOT a way to pass data to a RESTful web service in a flow using an outbound HTTP Request component?\par
+ANS: Set inbound properties before the HTTP Request component\par
+Q30\par
+What asset can NOT be created using Anypoint Platform Design Center?\par
+ANS: API portals\par
+\par
+Q30 An exception is caught by a choice exception strategy. How is the exception routed? \par
+ANS: To the first excePtion strategy whose condition evaluates to true\par
+Q31\par
+How is a default exception strategy set in a Mule application?\par
+ANS:\par
+Q32\par
+A Payload filter is configured to test for type javalang_String. What happens when the filter is passed a message with the payload null?\par
+ \par
+ANS: The message is passed to subsequent message processors\par
+\par
+Q33\par
+What module and operation will throw an exception if a Mule event's payload is not a number?\par
+ \par
+ANS: Validation module\f1\rquote\f0 s Is number operation\par
+Q34\par
+A Mule flow has a JMS queue listener as the message source. Where can the next message processor access a JMS messages header?\par
+ \par
+Inbound property\par
+Q35\par
+What part of a Mule flow can contain a Poll scope?\par
+ANS: Message source\par
+Q36\par
+How is a Poll scope's watermark accessed from a message processor in a flow?\par
+ANS: In a flow variable\par
+Q37\par
+A File connector configured to read files from a /mule/input directory. All other File connector settings are the default settings. What happens to a file after it is processed by the File connector?\par
+ANS: The file is deleted from the input directory, but is not moved anywhere\par
+\par
+Q38\par
+What phase of a batch job using a Batch scope must contain at least one message processor?\par
+ANS: Process Records\par
+\par
+Q39 A message payload is modified using a Message Enricher scope with an empty target. What is true about the message payload that leaves the Message Enricher scope?\par
+ \par
+ANS: The modified payload is stored as an outbound property\par
+\par
+Q40 A Batch scope has three batch steps. A message\par
+ processor in the second batch step throws an exception because the input data is incomplete. What is the default behavior after the exception is thrown?\par
+ANS: Stops processing the entire batch job\par
+Q41\par
+What is the purpose of the api:router element in APIkit?\par
+ANS: Validates requests against RAML API specifications and routes them to API implementations\par
+Q42\par
+What is the scope of a record variable in a Batch scope?\par
+ANS: In all batch steps, but not in the On Complete phase\par
+Q43\par
+A web client submits a GET request to a Mule 4 application to the endpoint /customers?id=48493. Where is the id stored in the Mule event by the HTTP Listener?\par
+ANS: Attributes\par
+Q44\par
+Assume that a database table contains a record ID column that always increases as new records get added to the table. In a Mule application, what is the key process to enable manual watermarking for requests to a database using the Scheduler endpoint and the Database SELECT operation?\par
+ANS: Save the max recordID from the set of recordIDs in an ObjectStore and reference this record in subsequent database requests\par
+Q45\par
+How is the success of a Center for enablement measured?\par
+ANS: Measured on asset consumption\par
+Q46 What are four ways APIs provide the info for how to communicate with a software component?\par
+ANS:\par
+Q47 This defines what you can call, what you send it, and what you get back:\par
+ANS: Web Service\par
+\par
+Q48 An API has been created in Design Center. What is the next step to make the API discoverable?\par
+ANS: Publish the API to Anypoint Exchange\par
+\par
+Q49\par
+What is an application that controls access to a web service, restricting access and usage with an API gateway?\par
+ANS: API Proxy\par
+Q50\par
+What is the actual implementation you can make calls to or the interface of that API implementation?\par
+ANS:\par
+Q51\par
+How are SOAP web services defined?\par
+\par
+ANS: In an XML-based WSDL (Web Services Description Language file\par
+Q52\par
+In what file does the Mule project keep track of all of its dependencies?\par
+ANS: Pom.xml\par
+\par
+Q53 What do RESTful web services use?\par
+ANS: Existing HTTP communication protocol\par
+Q54\par
+What is the minimum required configuration in a flow for a Mule application to compile?\par
+ANS: An event/message processor in the Source section of a flow\par
+\par
+Q55\par
+What can ONLY be done with VM connectors, and NOT with Flow References, in a single Mule application?\par
+ANS: Allow a flow to pass events to another flow asynchronously\par
+\par
+Q56\par
+Which RESTful web service request method partially updates a resource?\par
+ANS: PATCH\par
+\par
+Q57\par
+Which RESTful web service request method creates a new resource?\par
+ANS: PUT\par
+Q58\par
+An inbound Database connector is configured to select rows from a MySQL database. What is the format of results returned from the database query?\par
+ANS: JAVA\par
+Q59\par
+Which RESTful web service request method deletes a resource?\par
+ANS: DELETE\par
+Q60 What is NOT part of a Mule 4 event?\par
+ANS: ATRIBUTE\par
+Q61\par
+What file type is required to configure a Web Service Consumer to consume a SOAP web service?\par
+ANS: WSDL\par
+Q62 How does APIkit determine the number of flows to generate from a RAML specification?\par
+ANS: Creates a separate flow for each HTTP method\par
+\par
+Q63 How are query parameters dynamically passed to an outbound REST request using an HTTP Request operation?\par
+ANS: As query parameters in the HTTP Request operation\par
+\par
+Q64 What is the purpose of API autodiscovery?\par
+ANS: Allows a deployed Mule application to connect with API Manager to download policies and act as its own API proxy\par
+\par
+Q65 Refer to the exhibit:\par
+#%RAML 1.0 title: ACME Medical API baseUri: {{\field{\*\fldinst{HYPERLINK https://dev.acme.com/api /patients }}{\fldrslt{https://dev.acme.com/api /patients\ul0\cf0}}}}\f0\fs24 : GET: queryParameters: year: type: integer example: 2017 What is the correct URL to perform a GET request to /patients?\par
+ \par
+ANS:\par
+\f1\emspace\f0\par
+Refer to the exhibit. The payload [1,2,3] is passed to the Batch Job scope. In Batch_Step_1, a variable named batchStepPayload is set to the current payload. What is the value of the last log message after one batch job completes?\par
+\par
+}
+ 
